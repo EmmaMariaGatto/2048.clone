@@ -1,0 +1,40 @@
+*, *::before, *::after{
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+:root{
+    --cell-height: 20vmin;
+    --cell-width: 20vmin;
+    --cell-gap: 2vmin;
+    --grid-size: 4;
+}
+
+body{
+    background-color: rgb(150, 150, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-size: 7.5vmin;
+}
+
+#board{
+    background-color: bisque;
+    display: grid;
+    gap: var(--cell-gap);
+    grid-template-columns: repeat(var(--grid-size), var(--cell-height));
+    grid-template-rows: repeat(var(--grid-size), --cell-width);
+    border: 1vmin;
+    padding: 1vmin;
+    border-radius: 0.5em;
+    position: relative;
+}
+
+.cell{
+    height: var(--cell-height);
+    width: var(--cell-width);
+    background-color: rgb(205, 142, 76);
+    border-radius: 0.5em;
+}
